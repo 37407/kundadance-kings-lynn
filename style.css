@@ -123,12 +123,12 @@ button:hover {
 /* ---------- Poster ---------- */
 .poster-image {
   display: block;
-  width: 75%;           /* smaller poster */
-  max-width: 480px;     /* optional max width */
-  margin: 1.5rem auto;  /* tighter spacing from card */
+  width: 75%;
+  max-width: 480px;
+  margin: 1.5rem auto 2rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  opacity: 0;
+  opacity: 1; /* always visible by default */
   animation: fadeInUp 1.8s ease forwards;
   animation-delay: 0.5s;
 }
