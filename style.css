@@ -1,86 +1,118 @@
-/* Color palette
+/* -------------------------------------------
+   KUNDADANCE LANDING PAGE STYLES
+   Colors:
    Red:       #FF0204
    Charcoal:  #0D0D0F
    Off-white: #F3F2F0
-*/
+-------------------------------------------- */
+
+:root {
+  --red: #FF0204;
+  --black: #0D0D0F;
+  --offwhite: #F3F2F0;
+  --radius: 8px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  background-color: var(--offwhite);
+  color: var(--black);
   margin: 0;
-  background: #F3F2F0;
-  color: #0D0D0F;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  line-height: 1.6;
 }
 
+/* ---------- Layout ---------- */
 main {
-  max-width: 600px;
-  background: #F3F2F0;
-  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  background: var(--offwhite);
+  padding: 3rem 2rem;
   text-align: center;
 }
 
+/* ---------- Typography ---------- */
 h1 {
-  font-size: 2rem;
-  color: #0D0D0F;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  color: var(--black);
 }
 
 h2 {
-  color: #0D0D0F;
+  font-size: 1.4rem;
   margin-top: 2rem;
+  color: var(--black);
 }
 
 p {
-  line-height: 1.6;
+  font-size: 1.05rem;
   margin-bottom: 1rem;
 }
 
+/* ---------- Form ---------- */
 form {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 input[type="email"] {
-  padding: 0.6rem;
+  padding: 0.8rem;
   font-size: 1rem;
   width: 70%;
-  max-width: 300px;
+  max-width: 320px;
   margin-right: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: var(--radius);
+  background: white;
 }
 
 button {
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  background-color: #FF0204;
-  color: #F3F2F0;
+  font-weight: 600;
+  background-color: var(--red);
+  color: var(--offwhite);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
 }
 
 button:hover {
   background-color: #e00405;
+  transform: translateY(-1px);
 }
 
+/* ---------- Poster ---------- */
 .poster-image {
   display: block;
   width: 100%;
   max-width: 800px;
-  margin: 2rem auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin: 2rem auto 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
+/* ---------- Footer ---------- */
 footer {
-  max-width: 600px;
+  max-width: 700px;
+  width: 90%;
   text-align: center;
-  font-size: 0.85rem;
-  color: #0D0D0F;
-  margin: 2rem;
+  font-size: 0.9rem;
+  color: var(--black);
+  margin: 2rem 0 3rem;
   opacity: 0.8;
+  line-height: 1.5;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 1rem;
 }
