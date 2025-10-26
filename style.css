@@ -22,12 +22,13 @@
   box-sizing: border-box;
 }
 
+/* ---------- Layout ---------- */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--offwhite);
   color: var(--black);
   margin: 0;
-  padding: 0;
+  padding: 0 1rem; /* consistent spacing on mobile */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,25 +45,14 @@ body {
 /* ---------- Card layout ---------- */
 main {
   max-width: 720px;
-  width: 90%;
+  width: 100%;
   background: #ffffff;
-  padding: 3rem 2rem 2.5rem;
+  padding: 3rem 2rem 2rem;
   text-align: center;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   margin-top: 4rem;
   animation: fadeInUp 1.2s ease both;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ---------- Typography ---------- */
@@ -133,9 +123,9 @@ button:hover {
 /* ---------- Poster ---------- */
 .poster-image {
   display: block;
-  width: 75%;         /* scale down from full width */
-  max-width: 500px;   /* new smaller maximum width */
-  margin: 2rem auto 0; /* spacing above the image */
+  width: 75%;           /* smaller poster */
+  max-width: 480px;     /* optional max width */
+  margin: 1.5rem auto;  /* tighter spacing from card */
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   opacity: 0;
@@ -145,12 +135,12 @@ button:hover {
 
 /* ---------- Footer ---------- */
 footer {
-  max-width: 700px;
-  width: 90%;
+  max-width: 720px;      /* match main card */
+  width: 100%;
   text-align: center;
   font-size: 0.9rem;
   color: var(--black);
-  margin: 2rem 0 3rem;
+  margin: 1.5rem 0 3rem; /* closer spacing from poster */
   opacity: 0.8;
   line-height: 1.5;
   border-top: 1px solid rgba(0,0,0,0.1);
